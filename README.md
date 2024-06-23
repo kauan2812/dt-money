@@ -8,5 +8,5 @@
 
 
 
-## O design do projeto foi retirado do curso de ReactJS da Rcoketseat
+O design do projeto foi retirado do curso de ReactJS da Rocketseat
 
