@@ -15,6 +15,14 @@
       "category": "Alimentação",
       "price": 59,
       "createdAt": "2024-06-25T17:48:08.358Z"
+    },
+    {
+      "id": 3,
+      "description": "Refrigerante",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 7,
+      "createdAt": "2024-06-25T17:48:08.358Z"
     }
   ]
 }
