@@ -1,28 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { PriceHighLight, TransactionsContainer, TransactionsTable } from "./styles";
-
-interface Transaction {
-  id: number
-  description: string
-  type: 'income' | 'outcome'
-  category: string
-  price: number,
-  createdAt: string
-}
+import { TransactionsContext } from "../../contexts/TransactionsContext";
 
 export function Table() {
-  const [transactions, setTransactions] = useState<Transaction[]>([])
-
-  useEffect(() => {
-    async function loadTransactions() {
-      const response = await fetch('http://localhost:3000/transactions')
-      const data = await response.json()
-
-      setTransactions(data)
-    }
-
-    loadTransactions()
-  }, [])
+  const { transactions } = useContext(TransactionsContext)
 
   return (
     <TransactionsContainer>
@@ -41,7 +22,7 @@ export function Table() {
               </tr>
             )
           })}
-          
+
         </tbody>
       </TransactionsTable>
     </TransactionsContainer>
