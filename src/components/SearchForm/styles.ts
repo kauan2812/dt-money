@@ -7,6 +7,7 @@ export const SearchFormContainer = styled.div`
   margin: 0 auto;
   margin-top: 4rem;
   padding: 0 1.5rem;
+  height: 3.5rem;
 
   display: flex;
   gap: 1rem;
