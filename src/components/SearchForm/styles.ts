@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SearchFormContainer = styled.div`
+export const SearchFormContainer = styled.form`
   width: 100%;
   max-width: 1120px;
 
@@ -32,12 +32,17 @@ export const SearchFormContainer = styled.div`
     color: ${props => props.theme["green-300"]};
     font-weight: bold;
     border: 1px solid ${props => props.theme["green-300"]};
-    cursor: pointer; 
     transition: background-color 0.2s, color 0.2s;
-
-    &:hover {
+    cursor: pointer; 
+    
+    &:not(:disabled):hover {
       background: ${props => props.theme["green-300"]};
       color: ${props => props.theme.white};
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
     }
   }
 `;
